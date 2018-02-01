@@ -37,7 +37,7 @@ var counter=0;
   //var earthquakeName = earthquakes.features[0].properties.place;
   //ellipse(width / 2, height / 2, earthquakeMag * 10, earthquakeMag * 10);
  textAlign(RIGHT);
-  textSize(40);
+  textSize(30);
   text(earthquakeMag+'°C',  windowWidth, height/2);
   textSize(14);
   stroke(0);
