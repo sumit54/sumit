@@ -52,7 +52,7 @@ var counter=0;
     counter++;
     timer=windowWidth;
   }
-  else if(counter==5)
+  else if(counter==10)
   {
     counter=0;
   }
