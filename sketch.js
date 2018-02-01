@@ -7,7 +7,7 @@ var p;
 function preload() {
   // Get the most recent earthquake in the database
   var url =
-   'https://samples.openweathermap.org/data/2.5/weather?q=mumbai&appid=b6907d289e10d714a6e88b30761fae22';
+   'http://samples.openweathermap.org/data/2.5/weather?q=London,uk';
   earthquakes = loadJSON(url);
   
  
