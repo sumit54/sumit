@@ -17,7 +17,6 @@ var counter=0;
   background(-1);
   textAlign(CENTER, CENTER);
   textSize(70);
-  //text(timer, width/2, height/2);
   fill("white");
   text(hour()+':'+minute()+':'+second(), width/2, height/2);
  
