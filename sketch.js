@@ -8,7 +8,7 @@ var flag=true;
 function preload() {
   // Get the most recent earthquake in the database
 
-  setup1();
+  //setup1();
   var url =
    'https://api.openweathermap.org/data/2.5/weather?q=mumbai&APPID=7f3e06f2859683c336e51a66c47d18c5&units=metric';
   earthquakes = loadJSON(url);
