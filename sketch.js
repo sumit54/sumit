@@ -7,11 +7,9 @@ var p;
 function preload() {
   // Get the most recent earthquake in the database
   var url =
-   'http://api.openweathermap.org/data/2.5/weather?q=mumbai&APPID=7f3e06f2859683c336e51a66c47d18c5&units=metric';
+   'https://samples.openweathermap.org/data/2.5/weather?q=mumbai&appid=b6907d289e10d714a6e88b30761fae22';
   earthquakes = loadJSON(url);
-  var urlnews='https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=6c99432eb9214699a7dba0ba9d83f1e2';
-  news=loadJSON(urlnews);
-  timer = windowWidth;
+  
  
 }
 
@@ -33,28 +31,13 @@ var counter=0;
 
   // Get the magnitude and name of the earthquake out of the loaded JSON
   var earthquakeMag = earthquakes.main.temp;
-  var newsContaint=news.status;
+  
   //var earthquakeName = earthquakes.features[0].properties.place;
   //ellipse(width / 2, height / 2, earthquakeMag * 10, earthquakeMag * 10);
  textAlign(RIGHT);
   text(earthquakeMag+'°C',  windowWidth, height/2);
   textSize(14);
   stroke(0);
-  text(news.articles[counter].title,  timer, height/7);
-  //text(timer,  100, height/6);
- //newsOnline();
-  //setInterval(newsOnline,1000);
-  timer--;
-  
-  if(timer<0)
-  {
-    counter++;
-    timer=windowWidth;
-  }
-  else if(counter==5)
-  {
-    counter=0;
-  }
   
 } 
 
