@@ -28,7 +28,7 @@ var counter=0;
   textSize(70);
   //text(timer, width/2, height/2);
   fill("white");
-  text(hour()+':'+minute()+':'+second(), width/2, height/2);
+  text(hour()+':'+minute()+':'+second(), width/width+130, height/2);
  
 
   // Get the magnitude and name of the earthquake out of the loaded JSON
@@ -56,6 +56,12 @@ var counter=0;
     counter=0;
   }
   
-} 
+}
+function centerCanvas() {
+ createCanvas(windowWidth ,100);
+}
 
+function windowResized() {
+  centerCanvas();
+}
  //setInterval(newsOnline,1000);
