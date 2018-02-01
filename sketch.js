@@ -8,9 +8,9 @@ function preload() {
   // Get the most recent earthquake in the database
   var url =
    'http://api.openweathermap.org/data/2.5/weather?q=mumbai&APPID=7f3e06f2859683c336e51a66c47d18c5&units=metric';
-  earthquakes = loadJSON(url);
+  earthquakes = loadJSON(url,''jsonp);
   var urlnews='https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=6c99432eb9214699a7dba0ba9d83f1e2';
-  news=loadJSON(urlnews);
+  news=loadJSON(urlnews,'jsonp');
   timer = windowWidth;
  
 }
