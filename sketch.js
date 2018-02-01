@@ -11,7 +11,7 @@ function preload() {
   earthquakes = loadJSON(url);
   var urlnews='https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=6c99432eb9214699a7dba0ba9d83f1e2';
   news=loadJSON(urlnews);
-  timer = windowWidth;
+  timer =windowWidth+700;
  
 }
 
@@ -50,7 +50,7 @@ var counter=0;
   if(timer<0)
   {
     counter++;
-    timer=windowWidth;
+    timer=windowWidth+700;
   }
   else if(counter==10)
   {
