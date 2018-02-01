@@ -12,12 +12,14 @@ function preload() {
   var urlnews='https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=6c99432eb9214699a7dba0ba9d83f1e2';
   news=loadJSON(urlnews);
   timer =windowWidth+300;
+  //loadSound('E:\\Sumit Work\\pages\\PADMAVATI.mp3');
  
 }
 
 function setup() { 
  createCanvas(windowWidth ,100);
-
+ song.loop();
+//preloadt();
 } 
 
 var counter=0;
@@ -66,3 +68,12 @@ function windowResized() {
   centerCanvas();
 }
  //setInterval(newsOnline,1000);
+function mousePressed() {
+  if ( song.isPlaying() ) { // .isPlaying() returns a boolean
+    song.pause(); // .play() will resume from .pause() position
+    background(255,0,0);
+  } else {
+    song.play();
+    background(0,255,0);
+  }
+}
