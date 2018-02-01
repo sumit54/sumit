@@ -4,8 +4,11 @@ var earthquakes;
 var news;
 var timer = 0;
 var p;
+var flag=true;
 function preload() {
   // Get the most recent earthquake in the database
+
+  setup1();
   var url =
    'https://api.openweathermap.org/data/2.5/weather?q=mumbai&APPID=7f3e06f2859683c336e51a66c47d18c5&units=metric';
   earthquakes = loadJSON(url);
@@ -13,18 +16,26 @@ function preload() {
   news=loadJSON(urlnews);
   timer =windowWidth+300;
   //loadSound('E:\\Sumit Work\\pages\\PADMAVATI.mp3');
+ //alert('hi');
  
 }
 
-function setup() { 
+function setup1() { 
  createCanvas(windowWidth ,100);
  //song.loop();
 //preloadt();
 } 
 
+function setup()
+{
+  createCanvas(windowWidth ,100);
+}
+
 var counter=0;
 
  function draw() { 
+   
+   
   background(-1);
   textAlign(CENTER, CENTER);
   textSize(70);
@@ -68,12 +79,3 @@ function windowResized() {
   centerCanvas();
 }
  //setInterval(newsOnline,1000);
-function mousePressed() {
-  if ( song.isPlaying() ) { // .isPlaying() returns a boolean
-    song.pause(); // .play() will resume from .pause() position
-    background(255,0,0);
-  } else {
-    song.play();
-    background(0,255,0);
-  }
-}
