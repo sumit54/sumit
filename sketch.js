@@ -55,6 +55,29 @@ var counter=0;
   textSize(14);
   stroke(0);
   text(news.articles[counter].title,  timer, height/7);
+  if(hour()<11)
+  {
+      if(hour()>4)
+        text('Good Morning', windowWidth, height-10);
+  }
+
+  if(hour()>11)
+  {
+      if(hour()<16)
+        text('Good Afternoon', windowWidth, height-10);
+  }
+
+  if(hour()>16)
+  {
+      if(hour()<17)
+        text('Good Evening', windowWidth, height-10);
+  }
+  
+  if(hour()>17)
+  {
+        text('Good Night', windowWidth, height-10);
+  }
+  
   //text(timer,  100, height/6);
  //newsOnline();
   //setInterval(newsOnline,1000);
