@@ -18,7 +18,7 @@ function preload() {
 
 function setup() { 
  createCanvas(windowWidth ,100);
- song.loop();
+ //song.loop();
 //preloadt();
 } 
 
